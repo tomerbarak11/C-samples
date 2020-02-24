@@ -1,0 +1,10 @@
+gcc -g -ansi -pedantic -Wall -I../inlcude stack.c stackTest.c ../vector/vector.c
+
+chmod 777 myscript_createfiles.sh
+./myscript_createfiles.sh queue
+
+alias vlg='valgrind --leak-check=full --track-origins=yes ./a'
+
+ipcs -q
+ipcrm -q 123456
+
